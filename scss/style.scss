@@ -213,3 +213,29 @@
     }
 }
 
+@media (max-width: 1200px){
+    .estrutura{
+        //duas maneiras 1º
+        grid-template-areas: 
+        "header header header"
+        "sidenav content content"
+        "sidenav anuncios anuncios"
+        "footer footer footer"
+        ;
+        //2ºmaneira
+        // grid-template-columns: minmax(150px, 1fr) 3fr;
+    }
+}
+
+@media (max-width: 760px){
+    .estrutura{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "header"
+        "sidenav"
+        "content"
+        "anuncios"
+        "footer"
+        ;
+    }
+}
