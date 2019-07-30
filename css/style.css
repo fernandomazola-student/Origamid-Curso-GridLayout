@@ -26,6 +26,7 @@ img {
   display: grid;
   grid-template-columns: minmax(150px, 1fr) 3fr 300px;
   grid-template-areas: "header header header" "sidenav content anuncios" "footer footer footer";
+  /* SIDENAV */
 }
 .estrutura .header {
   grid-area: header;
@@ -56,6 +57,25 @@ img {
 }
 .estrutura .header nav a:hover {
   background: rgba(0, 0, 0, 0.5);
+}
+.estrutura .sidenav {
+  grid-area: sidenav;
+  background: #fafbfc;
+  padding: 30px;
+}
+.estrutura .sidenav ul li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  transition: 0.1s ease-out;
+}
+.estrutura .sidenav ul li a:hover {
+  background: #B07DFB;
 }
 .estrutura .content {
   grid-area: content;

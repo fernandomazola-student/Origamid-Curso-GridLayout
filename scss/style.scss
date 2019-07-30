@@ -44,8 +44,29 @@
         }
     }
     
+    /* SIDENAV */
     .sidenav{
-
+        grid-area: sidenav;
+        background: #fafbfc;
+        padding: 30px;
+        ul{
+            li{
+                a{
+                    display: block;
+                    min-width: 60px; //não pode dimiuir mais que isso se não destroi o svg
+                    max-width: 100px;
+                    margin: 0 auto 30px auto;
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 5px;
+                    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, .15);
+                    transition: .1s ease-out;
+                    &:hover{
+                        background: #B07DFB;
+                    }
+                }
+            }
+        }
     }
     
     .content{
