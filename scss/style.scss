@@ -1,0 +1,35 @@
+@import "components/reset";
+@import "components/variables";
+
+
+/* GRID GERAL */
+.estrutura{
+    display:grid;
+    grid-template-columns: minmax(150px, 1fr) 3fr 300px;
+    grid-template-areas: 
+    "header header header"
+    "sidenav content anuncios"
+    "footer footer footer"
+    ;
+    .header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        background: linear-gradient(135deg, #8844ee, #B07DFB);
+        padding: 30px;
+        align-items: center;
+    }
+    
+    .sidenav{
+     grid-area: sidenav;
+    }
+    
+    .content{
+        grid-area: content;
+    }
+    
+    .aside{
+        grid-area: anuncios;
+    }
+}
+
