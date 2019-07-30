@@ -53,7 +53,7 @@
             li{
                 a{
                     display: block;
-                    min-width: 60px; //não pode dimiuir mais que isso se não destroi o svg
+                    min-width: 90px; //não pode dimiuir mais que isso se não destroi o svg
                     max-width: 100px;
                     margin: 0 auto 30px auto;
                     background-color: white;
@@ -237,5 +237,56 @@
         "anuncios"
         "footer"
         ;
+        
+        .header{
+            grid-template-columns: auto;
+            .logo{
+                margin-bottom: 20px;
+            }
+            ul{
+                li{
+                    a{
+                        font-size: 1em;
+                    }
+                    & + li{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        @keyframes setaanimation {
+            from{
+                right: 30px;
+            }
+            to{
+                right: 20px;
+            }
+        }
+
+        .sidenav{
+            padding: 0 30px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            position: relative;
+            ul{
+                display: flex;
+                li{
+                    flex:1 0 60px;
+                    a{
+                        margin: 30px 30px 30px 0;
+                    }
+                }
+            }
+            &::after{
+                content: '→';
+                position: absolute;
+                top: 5px;
+                right: 35px;
+                color: rgba(0, 0,0, .4);
+                animation: setaanimation .5s ease-in infinite alternate;
+            }
+        }
     }
 }
