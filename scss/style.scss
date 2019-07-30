@@ -199,6 +199,7 @@
         padding: 30px;
         align-content: start;
         grid-gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
     }
 
     /* FOOTER */
@@ -289,4 +290,13 @@
             }
         }
     }
+}
+
+
+@media (max-width: 600px){
+    .estrutura{
+        .content{
+            grid-template-columns: auto;
+        }
+    }   
 }
